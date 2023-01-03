@@ -73,7 +73,7 @@ def get_errors():
 def delete_errors():
     with open('errors.txt', 'r+') as file:
         file.truncate()
-    return jsonify({"msg": "buffered cleared"})
+    return jsonify({"msg": "Error buffer cleared."})
 
 
 
