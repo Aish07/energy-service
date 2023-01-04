@@ -10,7 +10,7 @@ def write_error(data):
     err_file.close()
 
 @app.post('/temp')
-def temperature():
+def validate_temperature():
     body = request.get_json()
     try:
         data = body['data']
@@ -27,7 +27,6 @@ def temperature():
             raise ValueError()
         temperature = np.float64(temperature)
         device_id = np.int32(device_id)
-        epoch_ms = np.int64(epoch_ms)
 
         if temperature >= 90:
             time_format = datetime.now()
@@ -61,7 +60,7 @@ def temperature():
 
 
 @app.get('/errors')
-def get_errors():
+def read_errors():
     with open('errors.txt', 'r') as input_file:
         contents = input_file.read()
         lines = contents.split('\n')
