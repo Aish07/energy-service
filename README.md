@@ -29,7 +29,7 @@ Please note that a header 'Content-Type' with value 'application/json' will be r
 
 
 ## Test Scenarios
-
+Mentioned in the design doc in docs/
 
 ## Problem Statement
 
