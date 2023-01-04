@@ -11,6 +11,7 @@ def write_error(data):
 
 
 '''
+https://energy-service-temp.herokuapp.com/temp 
 Checks if the input string has temperature >= 90, then the api returns a JSON consisting of deviceId, time, overtemp = true.
 If the temperature < 90, then the response is overtemp = false.
 Returns 400 Bad Request if input string is not formatted correctly.
@@ -69,6 +70,7 @@ def validate_temperature():
 
 
 '''
+https://energy-service-temp.herokuapp.com/errors
 returns all data strings which have been incorrectly formatted
 '''
 @app.get('/errors')
@@ -81,6 +83,7 @@ def read_errors():
 
 
 '''
+https://energy-service-temp.herokuapp.com/errors 
 clears the errors buffer
 '''
 @app.delete('/errors')
